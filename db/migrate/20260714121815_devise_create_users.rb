@@ -6,6 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       ## Database authenticatable
       t.integer :job_id
       t.integer :city_id
+      t.integer :secteur_id
       t.integer :country_id
       t.string :experience,              null: false, default: ""
       t.string :salaire,              null: false, default: ""

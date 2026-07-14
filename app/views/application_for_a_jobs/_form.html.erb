@@ -1,0 +1,69 @@
+<%= form_with(model: application_for_a_job) do |form| %>
+  <% if application_for_a_job.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(application_for_a_job.errors.count, "error") %> prohibited this application_for_a_job from being saved:</h2>
+
+      <ul>
+        <% application_for_a_job.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :entreprise, style: "display: block" %>
+    <%= form.text_field :entreprise %>
+  </div>
+
+  <div>
+    <%= form.label :lieu, style: "display: block" %>
+    <%= form.text_field :lieu %>
+  </div>
+
+  <div>
+    <%= form.label :poste, style: "display: block" %>
+    <%= form.text_field :poste %>
+  </div>
+
+  <div>
+    <%= form.label :statut, style: "display: block" %>
+    <%= form.select :statut, ["Je vais postuler","J'ai postulé","J'ai relancé","J'ai un entretien","Je n'ai pas reçu de réponse","J'ai reçu une réponse négative"] %>
+  </div>
+
+  <div>
+    <%= form.label :datedenvoi, style: "display: block" %>
+    <%= form.date_field :datedenvoi %>
+  </div>
+
+  <div>
+    <%= form.label :datederelance, style: "display: block" %>
+    <%= form.date_field :datederelance %>
+  </div>
+lien_internet contact date_dernier_contact:date detail_offre:text commentaire
+  <div>
+    <%= form.label :lien_internet, style: "display: block" %>
+    <%= form.text_field :lien_internet %>
+  </div>
+  <div>
+    <%= form.label :contact, style: "display: block" %>
+    <%= form.text_field :contact %>
+  </div>
+  <div>
+    <%= form.label :date_dernier_contact, style: "display: block" %>
+    <%= form.date_field :date_dernier_contact %>
+  </div>
+  <div>
+    <%= form.label :detail_offre, "détail de l'offre : Vous pouvez copier/coller ici le détail de l'offre car elle peut être supprimée du site web", style: "display: block" %>
+
+    <%= form.text_area :detail_offre %>
+  </div>
+  <div>
+    <%= form.label :commentaire, "", style: "display: block" %>
+    <%= form.text_area :commentaire %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

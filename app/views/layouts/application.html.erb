@@ -15,6 +15,8 @@
 <%=link_to "ajouter une methode ikigai", ikigai_methodes_path%>
 <%=link_to "deep_research", deep_research_index_path%>
 <%=link_to "liste des offres", liste_offres_index_path%>
+<%=link_to "candidatures à des offres d'emploi", application_for_a_jobs_path%>
+
 <%=link_to "résumé de linkedin", linkedin_resume_index_path%>
 <%=link_to "publier du contenu sur linkedin", publier_contenu_index_path%>
 <%=link_to "booster mon cv", booster_cv_index_path%>
@@ -37,6 +39,14 @@
 <%=link_to "ajouter un type d'employeur", new_employeur_type_path%>
 <%=link_to "ajouter un employeur", new_employeur_path%>
 <%=link_to "ajouter un canal de recrutement", new_canal_recrutement_path%>
+<hr>
+<%if user_signed_in?%>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete  %>
+<%= link_to "modifier mes informations", edit_user_registration_path %>
+<%else%>
+<%= link_to "se connecter", new_user_session_path %>
+<%= link_to "s'enregistrer", new_user_registration_path %>
+<%end%>
 <hr>
     <%= yield %>
   </body>

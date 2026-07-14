@@ -1,3 +1,75 @@
 <%=content_for :title do%>booster le cv<%end%><h1>Booster le Cv</h1>
 <p>ATS veut dire applicant tracking system c'est un robot de tri qui trie les CV avant les humains. il analyse la distance du domicile, les diplomes. Dis à gemini d'analyser l'offre d'emploi en donnant les mots clés, les compétences techniques ou comportementales dans le profile et l'expérience, et une phrase à intégrer dans la phrase d'accroche du CV.
 </p>
+<li>
+chercher metrique ats, systeme ponderation mots clés (1 quand javascript dans le CV=javascript dans l'offre, 0.7 quand développeur web=développeuse web, 0.5 symfony veut dire PHP), bonus education bac+5 dans le CV > bac+2 dans l'offre, seuil de decision algorithmique
+
+</li>
+<li>
+chercher hropenstandards
+</li>
+<li>
+chercher hropenstandards, open source ats, resume parser, HOW TO BUILD a resume parser with python and nlp
+</li>
+<li>
+chercher [nom de l'ats'] release notes
+chercher [nom de l'ats'] quoi de neuf
+</li>
+<li>
+rapport annuel d'analyste rh
+</li>
+<li>
+culture rh, helloworkplace, lab rh
+</li>
+<li>
+chercher referentiel de competences et metiers officiel ESCO
+</li>
+<li>
+chercher referentiel de competences et metiers officiel ESCO
+</li>
+<li>
+chercher mots de structures du CV , 
+resume parts, parsing CV
+</li>
+<li>2. tu dois trouver une liste de synonymes pour chaque nom de section du CV pour un CV parser SectionMots-clés à chercher (avec variations majuscules/accents)ExpérienceExpériences professionnelles, Parcours, Postes occupés, Historique de carrière, Work Experience, BackgroundÉducationFormation, Études, Diplômes, Cursus, Éducation, EducationCompétencesCompétences, Hard Skills, Soft Skills, Technologies, Outils maîtrisés, Compétences clésLanguesLangues, Langues parlées, Languages</li>
+<li>
+lemmatisation avec spacy, proximité sémantique (Word Embeddings) distance entre deux mots avec FastText, BERT ou des modèles spaCy en français
+
+</li>
+<li>
+chercher entités nommées (NER - Named Entity Recognition durée, technologie, 
+</li>
+<p>
+<br>Analyse du fichier
+<br>✅ : Le fichier est dans un format standard et lisible
+<br>✅ : Le fichier est au format PDF
+<br>✅ : Le CV est suffisamment léger (idéalement moins de 200ko), et les photos importées dessus sont compressées (jpg/webp compressé).
+<br>✅ : Le fichier est au format portrait
+<br>✅ : Le nom du fichier contient le prénom et le nom
+<br>✅ : Si plusieurs pages, la dernière page est remplie à au moins 15% ; ou CV une page.
+<br>Analyse des contenus
+<br>✅ : Le titre du CV correspond au métier visé
+<br>✅ : Le prénom et le nom sont présents dans le CV
+<br>✅ : Un numéro de téléphone ou une adresse email est mentionné
+<br>❌ : La mobilité géographique ou une adresse est précisée
+<br>✅ : Au moins une expérience professionnelle est détaillée
+<br>✅ : Le contenu ne présente pas de répétitions significatives
+<br>⚠️ : Aucune faute d'orthographe ni de grammaire détectée
+<br>
+<br>✅ : Les expériences mentionnent des mots-clés du secteur ou du métier ciblé
+<br>❌ : Les expériences contiennent des résultats chiffrés ou indicateurs de performance
+<br>Lisibilité et professionnalisme
+<br>✅ : Le CV est propre, et si c'est un scan il est de qualité
+<br>✅ : Bonne hiérarchie structurelle avec des titres de rubrique
+<br>✅ : Uniformité des polices et tailles de texte et des alignements
+<br>✅ : La logique d'utilisation des majuscules est cohérente
+<br>✅ : Choix des couleurs lisible, le contraste des couleurs choisi est lisible
+<br>✅ : Si une photo est présente sur le CV, il s'agit d'une photo professionnelle ; ou pas de photo.
+<br>Structure et sections
+<br>✅ : Une ou plusieurs expériences professionnelles sont détaillées
+<br>✅ : Une section dédiée aux diplômes et formations est présente
+<br>✅ : Les compétences métier (hard skills) sont clairement présentées
+<br>✅ : Les savoir-être (soft skills) sont mis en avant
+<br>✅ : Les compétences informatiques sont indiquées
+<br>✅ : Les compétences linguistiques sont mentionnées
+</p>

@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_14_083935) do
+ActiveRecord::Schema[7.1].define(version: 2026_07_14_125253) do
+  create_table "application_for_a_jobs", force: :cascade do |t|
+    t.string "entreprise"
+    t.string "lieu"
+    t.string "poste"
+    t.string "statut"
+    t.date "datedenvoi"
+    t.date "datederelance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "lien_internet"
+    t.string "contact"
+    t.date "date_dernier_contact"
+    t.text "detail_offre"
+    t.string "commentaire"
+  end
+
   create_table "canal_recrutements", force: :cascade do |t|
     t.string "name"
     t.integer "city_id", null: false
@@ -86,6 +102,26 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_14_083935) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer "job_id"
+    t.integer "city_id"
+    t.integer "secteur_id"
+    t.integer "country_id"
+    t.string "experience", default: "", null: false
+    t.string "salaire", default: "", null: false
+    t.string "nomcomplet", default: "", null: false
+    t.string "phone", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "canal_recrutements", "cities"

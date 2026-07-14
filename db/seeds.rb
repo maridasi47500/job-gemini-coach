@@ -8,6 +8,9 @@
 #rails g scaffold canal_recrutement name city_id #(salons professionels, commaunaute tech locales)
 
 #
+["technicien/ne informatique", "développeur-se web"].each do |genre_name|
+  Job.find_or_create_by!(name: genre_name)
+end
 ["informatique"].each do |genre_name|
   Secteur.find_or_create_by!(name: genre_name)
 end
@@ -18,5 +21,5 @@ country=Country.find_or_create_by(name: "France")
 region=Region.find_or_create_by(name: "ile de france", country_id: country.id)
 city=City.find_or_create_by(name: "Paris", region_id: region.id)
 ["Salon professionnel", "communauté tech locale"].each do |genre_name|
-  CanalRecrutement.find_or_create_by!(name: genre_name)
+  CanalRecrutement.find_or_create_by!(name: genre_name, city: city)
 end

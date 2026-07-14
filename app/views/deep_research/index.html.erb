@@ -1,13 +1,14 @@
 <%=content_for :title do%>deep research gemini<%end%><h1>Deep Research</h1>
-<p>en activant l'option deep research de gemini, fais un condensé stratégique pour analyser le marché de l'emploi pour mon secteur et le nom de mon métier</p>
+<p>en activant l'option deep research de gemini, fais un condensé stratégique pour analyser le marché de l'emploi pour mon secteur<%=link_to "ajouter ton secteur ici", new_secteur_path, target: "_blank"%> et le nom de mon métier<%=link_to "ajouter ton métier ici", new_job_path, target: "_blank"%></p>
 <p>
 
 demande toi : 
-quelles sont les tendances globales et l'état actuel du marché de l'emploi pour ton métier dans ton pays, avec un focus sur ta région et ta ville.
+quelles sont les tendances globales et l'état actuel du marché de l'emploi pour ton métier dans ton pays<%=link_to "ajouter ton pays ici", new_country_path, target: "_blank"%>, avec un focus sur ta région<%=link_to "ajouter ta région ici", new_region_path, target: "_blank"%> et ta ville<%=link_to "ajouter ta ville ici", new_city_path, target: "_blank"%>.
 <br>
-(2) quelles sont les compétences techniques, frameworks et langages de programmation les plus recherchés actuellement par les recruteurs.
+(2) quelles sont les compétences techniques, frameworks et langages de programmation les plus recherchés actuellement par les recruteurs<%=link_to "ajouter une compétence ici", new_skill_path, target: "_blank"%>.
 <br>
-(3) quelles sont les grilles de salaires moyens selon les niveaux d'expérience (junior, intermédiaire, senior) pour les freelances
-(4) quels sont les principaux types d'employeurs actifs dans ton secteur dans ta ville, notamment les ESN, les start-ups et les éditeurs de logiciels.
-(6) quels sont les meilleurs canaux de recrutement, salons professionnels et communautés tech locales pour optimiser sa recherche d'emploi ou son réseau à Lyon.
+(3) quelles sont les grilles de salaires moyens selon les niveaux d'expérience (junior, intermédiaire, senior) pour les freelances<%#=link_to "inscris toi ici pour dire ton niveau d'expérience", new_user_registration_path, target: "_blank"%>
+(4) quels sont les principaux types d'employeurs actifs dans ton secteur dans ta ville, notamment les ESN, les start-ups et les éditeurs de logiciels<%=link_to "chercher et ajouter un type d'employeur dans ton secteur ici", new_employeur_type_path, target: "_blank"%>.
+(6) quels sont les meilleurs canaux de recrutement, salons professionnels et communautés tech locales pour optimiser sa recherche d'emploi ou son réseau à Lyon<%=link_to "ajouter un canal de recrutement ici", new_canal_recrutement_path, target: "_blank"%>.
+ajouter plus de questions.
 </p>

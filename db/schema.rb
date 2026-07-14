@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_14_082504) do
+ActiveRecord::Schema[7.1].define(version: 2026_07_14_083935) do
   create_table "canal_recrutements", force: :cascade do |t|
     t.string "name"
     t.integer "city_id", null: false
@@ -41,10 +41,12 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_14_082504) do
 
   create_table "employeurs", force: :cascade do |t|
     t.string "name"
+    t.integer "secteur_id", null: false
     t.integer "employeur_type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["employeur_type_id"], name: "index_employeurs_on_employeur_type_id"
+    t.index ["secteur_id"], name: "index_employeurs_on_secteur_id"
   end
 
   create_table "ikigai_methodes", force: :cascade do |t|
@@ -74,6 +76,12 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_14_082504) do
     t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
+  create_table "secteurs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -83,5 +91,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_14_082504) do
   add_foreign_key "canal_recrutements", "cities"
   add_foreign_key "cities", "regions"
   add_foreign_key "employeurs", "employeur_types"
+  add_foreign_key "employeurs", "secteurs"
   add_foreign_key "regions", "countries"
 end

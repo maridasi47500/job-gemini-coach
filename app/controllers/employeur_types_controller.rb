@@ -25,7 +25,7 @@ class EmployeurTypesController < ApplicationController
 
     respond_to do |format|
       if @employeur_type.save
-        format.html { redirect_to @employeur_type, notice: "Employeur type was successfully created." }
+        format.html { redirect_to new_employeur_path(employeur_type_id: @employeur_type.id), notice: "Employeur type was successfully created." }
         format.json { render :show, status: :created, location: @employeur_type }
       else
         format.html { render :new, status: :unprocessable_content }

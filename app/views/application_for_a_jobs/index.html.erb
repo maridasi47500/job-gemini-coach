@@ -6,7 +6,7 @@
 </p>
 
 <p>
-<%=select_tag :trier, options_for_select([["trier par",""], ["date d'envoi", "envoi"], ["date de relance", "relance"]])%>
+<%=select_tag :trier, options_for_select([["trier par",""], ["date d'envoi", "envoi"], ["date de relance", "relance"]], params[:myparam]), {onchange: "window.location.href='http://'+window.location.host+window.location.pathname+'?myparam='+this.value;"}%>
 </p>
 
 <div id="application_for_a_jobs">

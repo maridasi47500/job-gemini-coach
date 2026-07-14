@@ -3,7 +3,13 @@ class ApplicationForAJobsController < ApplicationController
 
   # GET /application_for_a_jobs or /application_for_a_jobs.json
   def index
+    if params[:myparam]=="envoi"
+    @application_for_a_jobs = ApplicationForAJob.all.order(:datedenvoi => :desc)
+    elsif params[:myparam]=="envoi"
+    @application_for_a_jobs = ApplicationForAJob.all.order(:datederelance => :desc)
+    else
     @application_for_a_jobs = ApplicationForAJob.all
+    end
   end
 
   # GET /application_for_a_jobs/1 or /application_for_a_jobs/1.json

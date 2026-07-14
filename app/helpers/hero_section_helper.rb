@@ -1,0 +1,2 @@
+module HeroSectionHelper
+end

@@ -1,0 +1,2 @@
+class IkigaiMethode < ApplicationRecord
+end

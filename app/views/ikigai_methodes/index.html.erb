@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ikigai methodes</h1>
+
+<div id="ikigai_methodes">
+  <% @ikigai_methodes.each do |ikigai_methode| %>
+    <%= render ikigai_methode %>
+    <p>
+      <%= link_to "Show this ikigai methode", ikigai_methode %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ikigai methode", new_ikigai_methode_path %>

@@ -1,0 +1,2 @@
+module MoiVousNousHelper
+end

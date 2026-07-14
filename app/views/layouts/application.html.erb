@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=yield :title%>JobGeminiCoach</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+<%=link_to "coach pour le CV", coach_index_path%>
+<%=link_to "methode ikigai", ikigai_index_path%>
+<%=link_to "ajouter une methode ikigai", ikigai_methodes_path%>
+<%=link_to "deep_research", deep_research_index_path%>
+<%=link_to "liste des offres", liste_offres_index_path%>
+<%=link_to "résumé de linkedin", linkedin_resume_index_path%>
+<%=link_to "publier du contenu sur linkedin", publier_contenu_index_path%>
+<%=link_to "booster mon cv", booster_cv_index_path%>
+<%=link_to "canvas gemini", canvas_gemini_index_path%>
+
+<%=link_to "nano banana", nano_banana_index_path%>
+<%=link_to "portfolio", portfolio_index_path%>
+<%=link_to "hero section", hero_section_index_path%>
+<%=link_to "mot_clé sur le CV ou la lettre de motivation", mot_cle_index_path%>
+<%=link_to "la lettre de motivation en moi, vous, nous", moi_vous_nous_index_path%>
+<%=link_to "pitch de présentation", presentez_vous_index_path%>
+<%=link_to "gemini quiz interactif", quiz_interactif_index_path%>
+<%=link_to "gemini live", gemini_live_index_path%>
+<%=link_to "automatiser toutes les démarches de la recherche d'emploi", automatiser_demarche_index_path%>
+    <%= yield %>
+  </body>
+</html>

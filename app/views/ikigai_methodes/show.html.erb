@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ikigai_methode %>
+
+<div>
+  <%= link_to "Edit this ikigai methode", edit_ikigai_methode_path(@ikigai_methode) %> |
+  <%= link_to "Back to ikigai methodes", ikigai_methodes_path %>
+
+  <%= button_to "Destroy this ikigai methode", @ikigai_methode, method: :delete %>
+</div>

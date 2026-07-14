@@ -1,0 +1,57 @@
+<%= form_with(model: ikigai_methode) do |form| %>
+  <% if ikigai_methode.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ikigai_methode.errors.count, "error") %> prohibited this ikigai_methode from being saved:</h2>
+
+      <ul>
+        <% ikigai_methode.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :vocation, style: "display: block" %>
+    <%= form.text_field :vocation %>
+  </div>
+
+  <div>
+    <%= form.label :profession, style: "display: block" %>
+    <%= form.text_field :profession %>
+  </div>
+
+  <div>
+    <%= form.label :passion, style: "display: block" %>
+    <%= form.text_field :passion %>
+  </div>
+
+  <div>
+    <%= form.label :mission, style: "display: block" %>
+    <%= form.text_field :mission %>
+  </div>
+
+  <div>
+    <%= form.label :aimer, "ce que vous aimez", style: "display: block" %>
+    <%= form.text_field :aimer %>
+  </div>
+
+  <div>
+    <%= form.label :doue, "ce pour quoi vous êtes doué(e)", style: "display: block" %>
+    <%= form.text_field :doue %>
+  </div>
+
+  <div>
+    <%= form.label :besoin, "ce dont le monde a besoin", style: "display: block" %>
+    <%= form.text_field :besoin %>
+  </div>
+
+  <div>
+    <%= form.label :paye, "ce pour quoi vous êtes payé",  style: "display: block" %>
+    <%= form.text_field :paye %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Canal recrutements</h1>
+
+<div id="canal_recrutements">
+  <% @canal_recrutements.each do |canal_recrutement| %>
+    <%= render canal_recrutement %>
+    <p>
+      <%= link_to "Show this canal recrutement", canal_recrutement %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New canal recrutement", new_canal_recrutement_path %>

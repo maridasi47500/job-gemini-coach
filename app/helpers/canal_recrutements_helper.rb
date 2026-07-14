@@ -1,0 +1,2 @@
+module CanalRecrutementsHelper
+end

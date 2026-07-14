@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :employeurs
+  resources :secteurs
+  resources :canal_recrutements
+  resources :employeur_types
+  resources :skills
+  resources :cities
+  resources :regions
+  resources :countries
+  resources :jobs
   resources :ikigai_methodes
   get 'automatiser_demarche/index'
   get 'gemini_live/index'
@@ -15,7 +24,6 @@ Rails.application.routes.draw do
   get 'linkedin_resume/index'
   get 'liste_offres/index'
   get 'deep_research/index'
-  get 'ikigai/index'
   get 'coach/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

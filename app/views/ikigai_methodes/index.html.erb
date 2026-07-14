@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Ikigai methodes</h1>
+<%=content_for :title do%>methode ikigai<%end%>
+<h1>méthode Ikigai</h1>
+<p>la méthode ikigai est ce en quoi vous êtes bons, vos talents naturels, ce dont le monde a besoin, pour quoi être payé, ce dont il y a besoin sur le marché, demander à Gemini de compléter le dessin Ikigai avec mes compétences ou regarder sur Emploi Store</p>
+
 
 <div id="ikigai_methodes">
   <% @ikigai_methodes.each do |ikigai_methode| %>

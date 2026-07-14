@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @secteur %>
+
+<div>
+  <%= link_to "Edit this secteur", edit_secteur_path(@secteur) %> |
+  <%= link_to "Back to secteurs", secteurs_path %>
+
+  <%= button_to "Destroy this secteur", @secteur, method: :delete %>
+</div>

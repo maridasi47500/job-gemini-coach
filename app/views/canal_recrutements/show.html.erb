@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @canal_recrutement %>
+
+<div>
+  <%= link_to "Edit this canal recrutement", edit_canal_recrutement_path(@canal_recrutement) %> |
+  <%= link_to "Back to canal recrutements", canal_recrutements_path %>
+
+  <%= button_to "Destroy this canal recrutement", @canal_recrutement, method: :delete %>
+</div>

@@ -11,7 +11,7 @@
 
   <body>
 <%=link_to "coach pour le CV", coach_index_path%>
-<%=link_to "methode ikigai", ikigai_index_path%>
+
 <%=link_to "ajouter une methode ikigai", ikigai_methodes_path%>
 <%=link_to "deep_research", deep_research_index_path%>
 <%=link_to "liste des offres", liste_offres_index_path%>
@@ -29,6 +29,15 @@
 <%=link_to "gemini quiz interactif", quiz_interactif_index_path%>
 <%=link_to "gemini live", gemini_live_index_path%>
 <%=link_to "automatiser toutes les démarches de la recherche d'emploi", automatiser_demarche_index_path%>
+<hr>
+<%=link_to "ajouter un pays", new_country_path%>
+<%=link_to "ajouter une region", new_region_path%>
+<%=link_to "ajouter une ville", new_city_path%>
+<%=link_to "ajouter un métier", new_job_path%>
+<%=link_to "ajouter un type d'employeur", new_employeur_type_path%>
+<%=link_to "ajouter un employeur", new_employeur_path%>
+<%=link_to "ajouter un canal de recrutement", new_canal_recrutement_path%>
+<hr>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,40 @@
+<h1>Entretien téléphonique : questions</h1>
+<div id="reponse">
+<p>
+Je suis actuellement (poste) <input name="poste" /> chez (entreprise)<input name="entreprise" />, où je m'occupe principalement de (mission clé) <input name="mission"/>. Avant ça, j'ai travaillé (X ans) dans (secteur/entreprise)<input name="secteur"/>, ce qui m'a permis de développer (compétence)<input name="competence"/>. Ce poste m'attire parce qu'il prolonge naturellement cette trajectoire.
+</p>
+<p>
+Ce qui m'a le plus apporté, c'est mon passage chez (entreprise) <input name="entreprise" /> : j'y ai appris (compétence concrète) <input name="competence" /> dans un contexte (exigeant/stimulant). Pour l'expérience moins concluante, j'ai réalisé chez (entreprise)<input name="entreprise" /> que le travail très cloisonné ne correspondait pas à ma façon de fonctionner.
+
+</p>
+<p>
+Je cherche un poste où je peux (mission concrète) <input name"mission" />, dans une équipe où (type d'ambiance) <input name="ambiance" />. Ce qui compte aussi pour moi, c'est (valeur : autonomie, impact, apprentissage…) <input name="valeur" />.
+</p>
+<p>
+J'ai vu que vous cherchez quelqu'un pour (mission spécifique de l'offre) <input name="mission"/>. C'est exactement ce sur quoi j'ai travaillé chez (ancienne entreprise)<input name="ancienneentreprise"/>, notamment (exemple concret) <input name="example" />. J'ai aussi regardé vos actualités récentes, et (initiative/projet de l'entreprise) <input name="projet" /> m'a vraiment interpellé.
+</p>
+<p>
+D'après ce que j'ai lu sur votre site et vos réseaux, vous êtes (secteur/positionnement) <input name"secteur"/>, avec une forte orientation (valeur/approche)<input name="valeur"/>. J'ai noté que vous avez récemment (actualité)<input name="actualite"/>. Ce qui m'a frappé, c'est (observation personnelle)<input name="observation"/>.
+</p>
+<p>
+Je suis actuellement en poste avec un préavis de durée <input name="duree"/>. Je tenais à être transparent dès maintenant. Selon l'urgence de votre recrutement, je serais prêt à tout mettre en œuvre pour trouver un arrangement avec mon employeur actuel. / Je suis disponible immédiatement.
+</p>
+<p>
+Bonnes questions : Quelles sont les prochaines étapes du processus de recrutement ? -Comment est organisée l'équipe que je rejoindrais ? -Qu'est-ce qui distingue les personnes qui réussissent dans ce poste selon vous ? 
+</p>
+</div>
+<p id="result">
+</p>
+  <script>
+    window.onload=function(){
+      $("#reponse input").on("keyup", function(){
+        var x=$("#reponse p").toArray().map(x=>(x.innerHTML)).join();
+        result.innerHTML=x;
+        var z = $("#result input");
+        var b=$("#reponse input");
+        for (var a=0; a<z.length;a++){
+            z[a].outerHTML=b[a].value;
+        };
+      });
+    }
+  </script>

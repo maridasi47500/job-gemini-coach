@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'entretien/questions'
   resources :application_for_a_jobs
       devise_for :users, controllers: {
         registrations: 'users/registrations',

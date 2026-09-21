@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @methode_star %>
+
+<div>
+  <%= link_to "Edit this methode star", edit_methode_star_path(@methode_star) %> |
+  <%= link_to "Back to methode stars", methode_stars_path %>
+
+  <%= button_to "Destroy this methode star", @methode_star, method: :delete %>
+</div>

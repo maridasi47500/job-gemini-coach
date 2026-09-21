@@ -1,0 +1,2 @@
+class MethodeStar < ApplicationRecord
+end

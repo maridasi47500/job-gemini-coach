@@ -40,6 +40,8 @@
 <%=link_to "ajouter un employeur", new_employeur_path%>
 <%=link_to "ajouter un canal de recrutement", new_canal_recrutement_path%>
 <%=link_to "questions pour l'entretien téléphonique", entretien_questions_path%>
+<%=link_to "methodes star", methode_stars_path%>
+<%=link_to "secteurs des softskills", softskillsecteur_hello_path%>
 <hr>
 <%if user_signed_in?%>
 <%= button_to "Log Out", destroy_user_session_path, method: :delete  %>

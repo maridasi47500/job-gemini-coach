@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'softskillsecteur/hello'
+  resources :methode_stars
   get 'entretien/questions'
   resources :application_for_a_jobs
       devise_for :users, controllers: {

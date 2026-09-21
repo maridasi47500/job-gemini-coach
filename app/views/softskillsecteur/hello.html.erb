@@ -1,0 +1,84 @@
+<h1>Softskillsecteur#hello</h1>
+<p>Find me in app/views/softskillsecteur/hello.html.erb</p>
+<select id="secteurs">
+</select>
+
+<p id="secteurname"></p>
+<p id="softskill"></p>
+<p id="pourquoi"></p>
+<script>
+  window.onload=function(){
+    var x={
+  "items": [
+    {
+      "secteur": "Secteur",
+      "softskill": "Soft Skills",
+      "pourquoi": "Pourquoi ?"
+    },
+    {
+      "secteur": "Commerce / Vente",
+      "softskill": "Négociation, persuasion, orientation client, écoute, résilience",
+      "pourquoi": "La relation client est au cœur du métier. Convaincre, fidéliser et rebondir après un refus sont des compétences quotidiennes."
+    },
+    {
+      "secteur": "Tech / IT",
+      "softskill": "Résolution de problèmes, adaptabilité, travail en équipe, communication, capacité d'apprentissage",
+      "pourquoi": "Les technologies évoluent vite. Collaborer avec des profils variés (designers, product owners) et vulgariser des sujets techniques sont essentiels."
+    },
+    {
+      "secteur": "Santé / Médico-social",
+      "softskill": "Empathie, gestion du stress, rigueur, écoute active, patience",
+      "pourquoi": "Le contact humain avec des patients ou des personnes vulnérables exige une forte intelligence émotionnelle et une maîtrise de soi à toute épreuve."
+    },
+    {
+      "secteur": "Finance / Banque / Assurance",
+      "softskill": "Esprit d'analyse, éthique, prise de décision, rigueur, discrétion",
+      "pourquoi": "La manipulation de données sensibles et les enjeux réglementaires imposent une grande fiabilité et un sens aigu des responsabilités."
+    },
+    {
+      "secteur": "Marketing / Communication",
+      "softskill": "Créativité, curiosité, sens de l'innovation, travail en équipe, gestion de projet",
+      "pourquoi": "Innover, anticiper les tendances et coordonner des campagnes multi-supports nécessitent agilité et collaboration."
+    },
+    {
+      "secteur": "Ressources humaines",
+      "softskill": "Écoute, diplomatie, intelligence émotionnelle, confidentialité, gestion des conflits",
+      "pourquoi": "Accompagner les collaborateurs, gérer des situations délicates et préserver la confiance sont au cœur du métier RH."
+    },
+    {
+      "secteur": "Industrie / BTP",
+      "softskill": "Organisation, respect des consignes, esprit d'équipe, réactivité, gestion du stress",
+      "pourquoi": "Les contraintes de sécurité et de délais exigent rigueur et coordination permanente sur le terrain."
+    },
+    {
+      "secteur": "Hôtellerie / Restauration",
+      "softskill": "Orientation client, flexibilité, gestion du stress, positivité, polyvalence",
+      "pourquoi": "Le rythme soutenu et le contact client constant demandent une grande adaptabilité et un sens du service irréprochable."
+    },
+    {
+      "secteur": "Enseignement / Formation",
+      "softskill": "Pédagogie, patience, communication, adaptabilité, enthousiasme",
+      "pourquoi": "Transmettre des savoirs à des publics variés nécessite de s'adapter en permanence et de maintenir l'engagement."
+    },
+    {
+      "secteur": "Juridique",
+      "softskill": "Esprit d'analyse, rigueur, éthique, communication écrite, gestion du temps",
+      "pourquoi": "La précision du langage, le respect des délais et la confidentialité sont des impératifs absolus."
+    }
+  ]
+};
+    secteurs.dataset.options=JSON.stringify(x);
+    secteurs.innerHTML+="<option>"+"</option>"
+    for (var i=0;i<x.items.length;i++){
+      secteurs.innerHTML+="<option value=\""+String(i)+"\">"+x.items[i].secteur+"</option>";
+    }
+    secteurs.onchange=function(){
+      var z=this.value;
+      var a=JSON.parse(this.dataset.options).items;
+      secteurname.innerHTML="<b>secteur : </b>"+a[parseInt(z)].secteur;
+      softskill.innerHTML="<b>soft skill : </b>"+a[parseInt(z)].softskill;
+      pourquoi.innerHTML="<b>pourquoi ? </b>"+a[parseInt(z)].pourquoi;
+      return false;
+    };
+  }
+</script>

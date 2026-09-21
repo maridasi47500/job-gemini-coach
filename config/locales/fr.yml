@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    attributes: 
+      methode_star:
+        soft_skill_name: "Imaginons qu'un recruteur vous demande : « Pouvez-vous me donner un exemple de situation où vous avez fait preuve de (nom de soft skill)"
+        situation: "Situation : décrivez le contexte dans lequel vous vous trouviez"
+        tache: "Tâche : expliquez la mission ou le défi qui vous était confié"
+        action: "Action : détaillez les actions concrètes que vous avez mises en œuvre"
+        resultat: "Résultat : présentez les résultats obtenus, si possible chiffrés"

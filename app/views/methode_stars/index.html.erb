@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Methode star</h1>
+<p>Imaginons qu'un recruteur vous demande : « Pouvez-vous me donner un exemple de situation où vous avez fait preuve d'esprit d'équipe ? »</p>
+<p>
+Voici une réponse structurée selon la méthode STAR :
+</p>
+
+
+<p>Situation : « Lors de mon précédent poste, notre équipe de cinq personnes devait livrer un projet stratégique en trois semaines, alors que deux collaborateurs étaient absents pour maladie. »</p>
+
+    <p>Tâche : « En tant que chef de projet adjoint, je devais m'assurer que nous respections le délai malgré ce sous-effectif. »</p>
+
+    <p>Action : « J'ai organisé une réunion d'urgence pour redistribuer les tâches selon les compétences de chacun. J'ai également proposé de prendre en charge une partie des missions de mes collègues absents et mis en place un point quotidien de 15 minutes pour fluidifier la communication. »</p>
+
+    <p>Résultat : « Nous avons livré le projet dans les temps, avec une satisfaction client de 92 %. Cette expérience a renforcé la cohésion de l'équipe. »</p>
+
+<div id="methode_stars">
+  <% @methode_stars.each do |methode_star| %>
+    <%= render methode_star %>
+    <p>
+      <%= link_to "Show this methode star", methode_star %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New methode star", new_methode_star_path %>
+
